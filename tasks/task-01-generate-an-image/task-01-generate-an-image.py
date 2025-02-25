@@ -17,7 +17,9 @@ def generate_image(seed, width, height, mean, std):
         image (numpy.ndarray): The generated image.
     """
     ### START CODE HERE ###
-    ### TODO
+    np.random.seed(seed)  
+
+    image = np.random.normal(mean, std, (height, width)).astype(np.uint8)
     ### END CODE HERE ###
 
     return image
